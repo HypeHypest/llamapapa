@@ -1,0 +1,18 @@
+{
+  "name": "llamapapa-bot",
+  "version": "1.0.0",
+  "description": "Llama Papa Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "node -c index.js && echo 'Syntax check passed!'"
+  },
+  "keywords": ["discord", "bot", "llamapapa"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.22.1",
+    "dotenv": "^17.2.2"
+  }
+}
