@@ -20,7 +20,10 @@ const commands = [];
 
 // Load commands from files
 const foldersPath = path.join(__dirname, 'commands');
-const commandFolders = fs.readdirSync(foldersPath);
+const commandFolders = fs.readdirSync(foldersPath).filter(folder => {
+	const fullPath = path.join(foldersPath, folder);
+	return fs.statSync(fullPath).isDirectory() && folder !== 'utilities';
+});
 
 for (const folder of commandFolders) {
 	const commandsPath = path.join(foldersPath, folder);

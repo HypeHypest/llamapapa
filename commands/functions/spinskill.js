@@ -147,10 +147,9 @@ module.exports = {
                 }
                 if (winner) {
                     await channel.send({
-                        embeds: [embed.createBaseEmbed()
+                        embeds: [createBaseEmbed()
                             .setTitle('Poll Ended!')
                             .setDescription(`The winning skill is **${winner.skill}** with ${maxVotes} votes!`)
-                            .setImage(winner.image)
                         ]
                     });
                 } else {
